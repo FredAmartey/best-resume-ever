@@ -19,6 +19,8 @@ export default {
 @import '../node_modules/npm-font-open-sans/open-sans.css';
 @import '../node_modules/npm-font-open-sans-condensed/open-sans-condensed.css';
 @import '../node_modules/raleway-webfont/raleway.css';
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
+
 
 body {
   padding: 0;

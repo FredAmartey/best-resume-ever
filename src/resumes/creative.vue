@@ -3,7 +3,7 @@
     <div class="left-column">
       <div>
         <div class="headline">
-          <span> {{ person.name.first }} {{ person.name.middle }} </span>
+          <span class="uppercase"> {{ person.name.first }} {{ person.name.middle }} </span>
           <span class="uppercase"> {{ person.name.last }} </span>
         </div>
 
@@ -24,11 +24,13 @@
 
       <a :href="contactLinks.email">
         <div class="block-marged txt-full-white">
+           <i class="fa fa-paper-plane contact-icon"></i>
           {{ person.contact.email }}
         </div>
       </a>
 
       <div class="block-marged txt-full-white">
+         <i class="fa fa-phone contact-icon"></i>
         {{ person.contact.phone }}
       </div>
 
@@ -96,25 +98,6 @@
     </div>
 
     <div class="right-column">
-      <div class="experience-section section">
-        <div class="icon">
-          <i class="material-icons small-icon">work</i>
-          <span class="section-headline">{{ lang.experience }}</span>
-        </div>
-
-        <div class="section-content">
-          <a v-for="(experience, index) in person.experience" :key="index"
-            class="section-content__item"
-            :href="experience.website">
-
-            <span class="section-content__header"> {{ experience.position }}</span>
-            <span class="section-content__subheader"> {{ experience.company }}</span>
-            <div class="section-content__text"> {{ experience.timeperiod }}</div>
-            <span class="section-content__text--light"> {{ experience.description }}</span>
-          </a>
-        </div>
-      </div>
-
       <div class="education-section section">
         <div class="icon">
           <i class="material-icons">school</i>
@@ -130,6 +113,29 @@
             <span class="section-content__subheader">{{ education.degree }}</span>
             <span class="section-content__text"> {{ education.timeperiod }} </span>
             <span class="section-content__text--light"> {{ education.description }} </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="experience-section section">
+        <div class="icon">
+          <i class="material-icons small-icon">work</i>
+          <span class="section-headline">{{ lang.experience }}</span>
+        </div>
+
+        <div class="section-content">
+          <a v-for="(experience, index) in person.experience" :key="index"
+            class="section-content__item"
+            :href="experience.website">
+
+            <span class="section-content__header"> {{ experience.position }}</span>
+            <span class="section-content__subheader"> {{ experience.company }}</span>
+            <div class="section-content__text"> {{ experience.timeperiod }}</div>
+            <span class="section-content__text--light"> {{ experience.description }}</span>
+            <br/>
+            <span class="section-content__text--light"> {{ experience.description2 }}</span>
+            <br/>
+            <span class="section-content__text--light"> {{ experience.description3 }}</span>
           </a>
         </div>
       </div>
@@ -194,6 +200,12 @@
           </a>
         </div>
       </div>
+
+      <div v-if="person.footer"
+      class="footer-section section">
+
+          <div>{{ person.footer }}</div>
+      </div>
     </div>
   </div>
 </template>
@@ -209,7 +221,14 @@ export default Vue.component(name, getVueOptions(name));
 
 <style lang="less" scoped>
 
-@accent-color: #A800FA;
+// green
+ @accent-color: #2eca7f;
+// yellow
+// @accent-color: #FBB114; 
+// blue
+// @accent-color: #0b79df; 
+// purple
+// @accent-color: #A800FA;
 
 .resume {
   display: flex;
@@ -226,8 +245,8 @@ export default Vue.component(name, getVueOptions(name));
   padding-top: 45px;
   text-align: left;
 
-  color: #ffffff;
-  color:rgba(255,255,255,0.59);
+  color: #000000;
+  // color:rgba(255,255,255,0.59);
   background-color: @accent-color;
   overflow: hidden;
   display: block;
@@ -264,7 +283,7 @@ export default Vue.component(name, getVueOptions(name));
   display: flex;
   flex-direction: column;
   padding: 30px;
-
+  // background-color: #000000;
   height: 100%;
   width: 65%;
 }
@@ -297,7 +316,7 @@ a {
 }
 
 .contact-icon {
-  color: white;
+  color: black;
   font-size: 1.5em;
   margin-right: 10px;
 
@@ -340,17 +359,19 @@ a {
 }
 
 .headline {
-  color: white;
-  font-size: 1.3em;
+  color: black;
+  font-size: 2em;
   font-weight: bold;
 }
 
 .txt-full-white {
-  color: white;
+  color: black;
 }
 
 .uppercase {
-  text-transform: uppercase;
+  // text-transform: uppercase;
+  font-family: "Berkshire Swash";
+  color:white;
 }
 
 .section-headline {
@@ -495,5 +516,16 @@ a {
   display: block;
   margin-bottom: 10px;
 }
+
+.footer-section {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+  color: rgba(0,0,0,0.42);
+}
+
 
 </style>
