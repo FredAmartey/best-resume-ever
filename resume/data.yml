@@ -3,7 +3,7 @@ name:
   first: Fred
   middle:
   last: Amartey
-about: Seeking a full-time Co-op/Internship position for the summer of 2019 in the fields of Software Engineering or Web Development. Availabitlity May 2019 - December 2019.
+about: Seeking a full-time Co-op/Internship position for the summer of 2020 in the fields of Software Engineering or Web Development. Availabitlity May 2020 - December 2020.
 position: Software Engineer | Web Developer
 
 birth:
@@ -38,22 +38,26 @@ skills:
   level: 60
 - name: MongoDB
   level: 80
+- name: Docker
+  level: 80
 - name: ES6
   level: 70
+- name: CI/CD
+  level: 80
 - name: Nginx
   level: 99
 knowledge: ............................................................
 
 projects:
-- name: A11yRecruiter
+- name: A11YRecruiter
   platform: MongoDB | Express | React | Node.js
   description: a11yrecruiter.com is the first exclusive career services website for college students with disabilities.
   url: https://a11yrecruiter.com
 
-- name: TrailerTalk
-  platform: React | Redux
-  description: 🍿Social platform where you can browse movies 🎬, add friends and invite them to a movie showing.
-  url: https://trailertalk.xyz
+- name: AIfred
+  platform: HTML5 | CSS | JavaScript 
+  description: Your friendly neighbourhood AI but he's...not so friendly.
+  url: https://fredamartey.com/projects/aifred
 
 - name: fredamartey.com
   platform: HTML5 | CSS | JavaScript | PHP
@@ -69,9 +73,9 @@ contributions:
 
 contact:
   email: me@fredamartey.com
-  phone: (732)-266-0480
-  street: 6000 Reynolds Drive
-  city: 
+  phone: (916)-400-9049
+  street: 1532 Danbrook Drive, CA 95835
+  city: Sacramento
   website: https://fredamartey.com
   github: FredAmartey
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el

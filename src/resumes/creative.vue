@@ -450,7 +450,7 @@ a {
 }
 
 .section-content__text--light {
-  color: rgba(0,0,0,0.42);
+  color: rgba(0,0,0,0.55);
   font-weight: 300;
 }
 
